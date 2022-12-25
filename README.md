@@ -46,6 +46,10 @@ An owner can be specified when creating a new database:
 
 `CREATE DATABASE mydatabase OWNER myuser;`
 
+Database ownership can also be altered post-creation:
+
+`ALTER DATABASE mydatabase OWNER TO myuser;`
+
 Alternatively specify a tablespace:
 
 `CREATE DATABASE mydatabase OWNER myuser TABLESPACE myuserspace;`
