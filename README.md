@@ -85,3 +85,13 @@ Create a new role with a set of permissions:
 Alter an existing role:
 
 `ALTER ROLE myrole WITH NOLOGIN;`
+
+## Dump and Restore
+
+Create a database dump from a an instance running in a Docker container:
+
+`docker exec -t <your-container-id> pg_dumpall -c -U postgres > your-dump.file.sql`
+
+Example, using the current date as the dump file name:
+
+`` docker exec -t addfa87604bb pg_dumpall -c -U postgres > pg_db_dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql` ``
